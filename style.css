@@ -23,6 +23,7 @@ body {
   font-family: PopLight;
   overflow-x: hidden;
   background-color: black;
+  overflow-y: hidden;
 }
 
 a {
