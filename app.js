@@ -75,6 +75,7 @@ function init() {
   }
 
   function scrollChange(e) {
+    console.log(e);
     if (e.deltaY > 0) {
       scrollSlide += 1;
     } else {
@@ -89,6 +90,7 @@ function init() {
     }
     switchDots(scrollSlide);
     nextSlide(scrollSlide);
+    console.log(scrollSlide);
   }
 }
 

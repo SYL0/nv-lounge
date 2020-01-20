@@ -318,75 +318,86 @@ nav ul li a:hover::after {
   .pages h3 {
     font-size: 16px;
   }
+}
 
-  @media (max-width: 414px) {
-    .logo-size {
-      display: none;
-    }
-
-    .dropdown {
-      display: none;
-    }
-    nav {
-      padding-top: 2rem;
-    }
-    nav ul {
-      padding-right: 105px;
-    }
-
-    .hero {
-      justify-self: left;
-      padding-bottom: 15px;
-    }
-    .hero img {
-      height: 200px;
-    }
-    .pages h3 {
-      font-size: 12px;
-    }
-
-    .details h1 {
-      font-size: 20px;
-    }
-    .details h2 {
-      font-size: 16px;
-    }
+@media (max-width: 414px) {
+  .logo-size {
+    display: none;
   }
 
-  @media (max-width: 375px) {
-    .logo-size {
-      display: none;
-    }
+  .dropdown {
+    display: none;
+  }
+  nav {
+    padding-top: 2rem;
+  }
+  nav ul {
+    padding-right: 105px;
+  }
 
-    .dropdown {
-      display: none;
-    }
-    nav ul {
-      padding-right: 90px;
-    }
+  .hero {
+    justify-self: left;
+  }
+  .hero img {
+    height: 200px;
+  }
+  .pages h3 {
+    font-size: 12px;
+  }
 
-    .hero {
-      justify-self: left;
-      padding-bottom: 15px;
-    }
-    .hero img {
-      height: 200px;
-    }
-    .pages h3 {
-      font-size: 12px;
-    }
+  .details h1 {
+    font-size: 20px;
+  }
+  .details h2 {
+    font-size: 16px;
+  }
+}
 
-    .details h1 {
-      padding-top: 10px;
-      font-size: 20px;
-    }
-    .details h2 {
-      font-size: 12px;
-      padding: 10px 0 10px 0;
-    }
-    .details p {
-      padding-bottom: 0px;
-    }
+@media (max-width: 375px) {
+  .logo-size {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
+  nav ul {
+    padding-right: 90px;
+  }
+
+  .hero {
+    justify-self: left;
+  }
+  .hero img {
+    height: 175px;
+  }
+  .pages h3 {
+    font-size: 12px;
+  }
+
+  .details h1 {
+    padding-top: 10px;
+    font-size: 20px;
+  }
+  .details h2 {
+    font-size: 12px;
+    padding: 10px 0 10px 0;
+  }
+  .details p {
+    padding-bottom: 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero img {
+    height: 150px;
+  }
+
+  .home-details {
+    padding-bottom: 100px;
+  }
+  nav ul {
+    padding-right: 65px;
   }
 }
 
