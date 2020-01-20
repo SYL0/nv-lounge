@@ -178,7 +178,7 @@ nav ul li a:hover::after {
   display: flex;
 }
 .hero img {
-  height: 500px;
+  height: 300px;
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
@@ -195,13 +195,13 @@ nav ul li a:hover::after {
   z-index: 10;
 }
 .details h1 {
-  font-size: 64px;
+  font-size: 38px;
   font-family: PopRegular;
   text-transform: uppercase;
   letter-spacing: 7px;
 }
 .details h2 {
-  font-size: 24px;
+  font-size: 18px;
   padding: 30px 0px;
   font-family: PopExtraLight;
 }
@@ -256,6 +256,9 @@ nav ul li a:hover::after {
     grid-template-rows: 1fr 1fr;
     align-items: center;
   }
+  .dropdown {
+    font-size: 20px;
+  }
 
   .hero {
     grid-column: 2/3;
@@ -264,7 +267,7 @@ nav ul li a:hover::after {
     align-self: flex-end;
   }
   .hero img {
-    height: 400px;
+    height: 325px;
   }
 
   .details {
@@ -273,7 +276,7 @@ nav ul li a:hover::after {
     text-align: center;
   }
   .details h1 {
-    font-size: 48px;
+    font-size: 38px;
   }
   .details h2 {
     font-size: 24px;
@@ -292,6 +295,15 @@ nav ul li a:hover::after {
   .page {
     grid-template-rows: 1fr 1fr;
   }
+  .logo-size {
+    height: 75px;
+  }
+  .phone-text {
+    display: none;
+  }
+  .dropdown {
+    font-size: 18px;
+  }
   .hero {
     justify-self: center;
     align-self: flex-end;
@@ -303,10 +315,10 @@ nav ul li a:hover::after {
     text-align: center;
   }
   .details h1 {
-    font-size: 38px;
+    font-size: 24px;
   }
   .details h2 {
-    font-size: 24px;
+    font-size: 18px;
   }
   .pages {
     position: absolute;
@@ -317,6 +329,15 @@ nav ul li a:hover::after {
   }
   .pages h3 {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 532px) {
+  .dropdown {
+    display: none;
+  }
+  .hero {
+    justify-self: left;
   }
 }
 
