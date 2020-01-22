@@ -72,10 +72,14 @@ nav {
   grid-row: 2/3;
   display: grid;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
+  position: relative;
+}
+
+.home-page {
+  padding-bottom: 200px;
 }
 .cocktail-page,
-.clothing-page,
-.home-page {
+.clothing-page {
   position: absolute;
   bottom: 0%;
   left: 0%;
@@ -180,9 +184,6 @@ nav ul li a:hover::after {
   overflow: hidden;
   height: 500px;
   align-self: flex-start;
-
-  /* align-self: center; */
-  /* justify-self: center; */
   display: flex;
 }
 .hero img {
@@ -310,6 +311,10 @@ nav ul li a:hover::after {
     font-size: 18px;
   }
 
+  .home-page {
+    padding-bottom: 150px;
+  }
+
   .hero img {
     height: 200px;
   }
@@ -330,11 +335,8 @@ nav ul li a:hover::after {
     text-transform: uppercase;
   }
   .pages h3 {
-    font-size: 12px;
-    padding: 10px;
-  }
-  .pages svg {
-    height: 5px;
+    font-size: 16px;
+    padding: 20px;
   }
 }
 
@@ -354,6 +356,10 @@ nav ul li a:hover::after {
 
   .dropdown {
     display: none;
+  }
+
+  .home-page {
+    padding-bottom: 100px;
   }
 
   nav ul {
@@ -395,6 +401,10 @@ nav ul li a:hover::after {
     display: none;
   }
 
+  .home-page {
+    padding-bottom: 90px;
+  }
+
   .hero img {
     height: 150px;
   }
@@ -418,8 +428,15 @@ nav ul li a:hover::after {
   .hero img {
     height: 100px;
   }
+
+  .home-page {
+    padding-bottom: 115px;
+  }
+  .pages {
+    top: 45%;
+  }
   nav {
-    padding-top: 10px;
+    padding-bottom: 50px;
   }
   nav ul {
     padding-right: 65px;
