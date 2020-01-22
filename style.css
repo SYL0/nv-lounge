@@ -374,6 +374,10 @@ nav ul li a:hover::after {
 }
 
 @media (max-width: 375px) {
+  nav {
+    padding-top: 0px;
+  }
+
   .logo-size {
     display: none;
   }
@@ -383,7 +387,7 @@ nav ul li a:hover::after {
   }
 
   .hero img {
-    height: 150px;
+    height: 100px;
   }
   .pages h3 {
     font-size: 12px;
