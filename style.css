@@ -37,10 +37,13 @@ a {
     url("img/ue4-cyberpunk-grunge-sci-fi-asset-pack-3d-model-low-poly-obj-mtl-fbx-uasset.jpg")
       center no-repeat;
   background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
 }
 
 nav {
-  min-height: 10vh;
+  grid-row: 1/2;
+  min-height: 20vh;
   width: 90%;
   margin: auto;
   display: flex;
@@ -51,28 +54,27 @@ nav {
   text-transform: uppercase;
   font-size: 1.6rem;
 }
-
 .logo {
   height: 5px;
   width: 5px;
   transform: translateX(-1000rem);
   animation: slideIn 0.5s forwards;
+  align-self: flex-start;
 }
 .logo-size {
   height: 100px;
   padding: 0;
   margin: 0;
-  position: absolute;
-  top: -50px;
 }
 
 .page {
   min-height: 90vh;
+  grid-row: 2/3;
   display: grid;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
 }
-.cocktail-img,
-.clothing-img {
+.cocktail-page,
+.clothing-page {
   position: absolute;
   bottom: 0%;
   left: 0%;
@@ -166,15 +168,20 @@ nav ul li a:hover::after {
 }
 
 .page {
-  min-height: 90vh;
+  min-height: 80vh;
   display: grid;
-  grid-template-columns: 5% 1fr 2fr 1fr 5%;
+  grid-template-columns: 5% 2fr 2fr 1fr 5%;
+  grid-template-rows: 20% 1fr 5%;
 }
 .hero {
+  grid-column: 3/4;
+  grid-row: 2/3;
   overflow: hidden;
   height: 500px;
-  align-self: center;
-  justify-self: center;
+  align-self: flex-start;
+
+  /* align-self: center; */
+  /* justify-self: center; */
   display: flex;
 }
 .hero img {
@@ -191,7 +198,8 @@ nav ul li a:hover::after {
 }
 .details {
   grid-column: 2/3;
-  align-self: center;
+  grid-row: 2/3;
+  align-self: flex-start;
   z-index: 10;
 }
 .details h1 {
@@ -201,7 +209,7 @@ nav ul li a:hover::after {
   letter-spacing: 7px;
 }
 .details h2 {
-  font-size: 18px;
+  font-size: 24px;
   padding: 30px 0px;
   font-family: PopExtraLight;
 }
@@ -262,9 +270,10 @@ nav ul li a:hover::after {
 
   .hero {
     grid-column: 2/3;
+    grid-row: 1/2;
     height: auto;
     justify-self: center;
-    align-self: flex-end;
+    align-self: center;
   }
   .hero img {
     height: 325px;
@@ -283,18 +292,13 @@ nav ul li a:hover::after {
   }
 
   .pages {
-    position: absolute;
     right: 5%;
     top: 40%;
-    transform: translateY(-50%);
     text-transform: uppercase;
   }
 }
 
 @media (max-width: 768px) {
-  .page {
-    grid-template-rows: 1fr 1fr;
-  }
   .logo-size {
     height: 75px;
   }
@@ -304,12 +308,9 @@ nav ul li a:hover::after {
   .dropdown {
     font-size: 18px;
   }
-  .hero {
-    justify-self: center;
-    align-self: flex-end;
-  }
+
   .hero img {
-    height: 300px;
+    height: 200px;
   }
   .details {
     text-align: center;
@@ -349,9 +350,7 @@ nav ul li a:hover::after {
   .dropdown {
     display: none;
   }
-  nav {
-    padding-top: 2rem;
-  }
+
   nav ul {
     padding-right: 105px;
   }
@@ -360,7 +359,7 @@ nav ul li a:hover::after {
     justify-self: left;
   }
   .hero img {
-    height: 200px;
+    height: 150px;
   }
   .pages h3 {
     font-size: 12px;
@@ -370,7 +369,7 @@ nav ul li a:hover::after {
     font-size: 20px;
   }
   .details h2 {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -382,43 +381,40 @@ nav ul li a:hover::after {
   .dropdown {
     display: none;
   }
-  nav ul {
-    padding-right: 90px;
-  }
 
-  .hero {
-    justify-self: left;
-  }
   .hero img {
-    height: 175px;
+    height: 150px;
   }
   .pages h3 {
     font-size: 12px;
   }
 
   .details h1 {
-    padding-top: 10px;
     font-size: 20px;
   }
   .details h2 {
     font-size: 12px;
-    padding: 10px 0 10px 0;
-  }
-  .details p {
-    padding-bottom: 0px;
   }
 }
 
 @media (max-width: 320px) {
   .hero img {
-    height: 150px;
+    height: 100px;
   }
 
-  .home-details {
+  .home-page {
     padding-bottom: 100px;
+  }
+  nav {
+    padding-bottom: 50px;
   }
   nav ul {
     padding-right: 65px;
+  }
+
+  .details h1 {
+    padding-top: 30px;
+    font-size: 12px;
   }
 }
 
