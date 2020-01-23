@@ -270,6 +270,67 @@ nav ul li a:hover::after {
     top: 100%;
     left: 0;
   }
+
+  nav {
+    padding-bottom: 50px;
+  }
+  nav ul {
+    padding-right: 105px;
+  }
+
+  .logo-size {
+    display: none;
+  }
+  .phone-text {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
+  .home-page {
+    padding-bottom: 90px;
+  }
+
+  .hero {
+    justify-self: left;
+  }
+  .hero img {
+    height: 150px;
+  }
+
+  .cocktail-page,
+  .clothing-page {
+    position: absolute;
+    bottom: -5%;
+    left: 0%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .details {
+    text-align: center;
+  }
+  .details h1 {
+    font-size: 20px;
+  }
+  .details h2 {
+    font-size: 12px;
+  }
+  .pages {
+    position: absolute;
+    right: 5%;
+    top: 43%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+  }
+  .pages h3 {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .pages svg {
+    height: 5px;
+  }
 }
 
 @media (max-width: 1024px) {
