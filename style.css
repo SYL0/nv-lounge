@@ -260,7 +260,7 @@ nav ul li a:hover::after {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) /* iPad Pro */ {
   nav {
     padding-top: 10px;
     align-items: flex-start;
@@ -309,7 +309,7 @@ nav ul li a:hover::after {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) /* iPad */ {
   .logo-size {
     height: 75px;
   }
@@ -349,6 +349,47 @@ nav ul li a:hover::after {
   }
 }
 
+@media (max-width: 1024px) and (max-height: 768px) /* iPad Landscape */ {
+  .logo-size {
+    height: 75px;
+  }
+  .phone-text {
+    display: none;
+  }
+  .dropdown {
+    font-size: 18px;
+  }
+
+  .home-page {
+    padding-bottom: 150px;
+  }
+
+  .hero img {
+    height: 200px;
+  }
+  .details {
+    text-align: center;
+  }
+  .details h1 {
+    margin-top: 50px;
+    font-size: 24px;
+  }
+  .details h2 {
+    font-size: 18px;
+  }
+  .pages {
+    position: absolute;
+    right: 5%;
+    top: 43%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+  }
+  .pages h3 {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+
 @media (max-width: 532px) {
   .dropdown {
     display: none;
@@ -358,7 +399,7 @@ nav ul li a:hover::after {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 414px) /* iPhone 6/7/8 Plus */ {
   .logo-size {
     display: none;
   }
@@ -407,7 +448,71 @@ nav ul li a:hover::after {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 823px) and (max-height: 414px) /* iPhone 6/7/8 Plus,
+  iPhone X,
+  Google Pixel 2 XL landscape */ {
+  .dropdown {
+    display: none;
+  }
+
+  .page {
+    grid-template-columns: 5% 1fr 2fr 1fr 5%;
+    grid-template-rows: 5% 1fr 5%;
+    align-items: center;
+  }
+
+  .home-page {
+    padding-bottom: 100px;
+  }
+
+  .cocktail-page,
+  .clothing-page {
+    position: absolute;
+    bottom: -4%;
+    left: 0%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  nav ul {
+    padding-right: 105px;
+  }
+
+  .hero {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: left;
+  }
+  .hero img {
+    height: 150px;
+  }
+
+  .pages {
+    top: 57%;
+  }
+  .pages h3 {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .pages svg {
+    height: 5px;
+  }
+
+  .details {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    text-align: left;
+  }
+  .details h1 {
+    font-size: 20px;
+  }
+  .details h2 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) /* iPhone 6/7/8 */ {
   nav {
     padding-bottom: 50px;
   }
@@ -452,7 +557,69 @@ nav ul li a:hover::after {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 736px) and (max-height: 414px) /* iPhone 6/7/8 landscape */ {
+  .dropdown {
+    display: none;
+  }
+
+  .page {
+    grid-template-columns: 5% 1fr 2fr 1fr 5%;
+    grid-template-rows: 5% 1fr 5%;
+    align-items: center;
+  }
+
+  .home-page {
+    padding-bottom: 100px;
+  }
+
+  .cocktail-page,
+  .clothing-page {
+    position: absolute;
+    bottom: -4%;
+    left: 0%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  nav ul {
+    padding-right: 105px;
+  }
+
+  .hero {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: left;
+  }
+  .hero img {
+    height: 100px;
+  }
+
+  .pages {
+    top: 60%;
+  }
+  .pages h3 {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .pages svg {
+    height: 5px;
+  }
+
+  .details {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    text-align: left;
+  }
+  .details h1 {
+    font-size: 20px;
+  }
+  .details h2 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) /* iPhone 5/SE */ {
   .hero img {
     height: 100px;
   }
@@ -463,7 +630,7 @@ nav ul li a:hover::after {
   .cocktail-page,
   .clothing-page {
     position: absolute;
-    bottom: -4%;
+    bottom: 4%;
     left: 0%;
     width: 100%;
     opacity: 0;
@@ -480,8 +647,73 @@ nav ul li a:hover::after {
   }
 
   .details h1 {
-    padding-top: 30px;
     font-size: 12px;
+  }
+}
+
+@media (max-width: 568px) and (max-height: 320px) /* iPhone 5/SE landscape */ {
+  .dropdown {
+    display: none;
+  }
+
+  .logo-size {
+    height: 50px;
+  }
+
+  .page {
+    grid-template-columns: 5% 1fr 2fr 1fr 5%;
+    grid-template-rows: 5% 2fr 5%;
+    align-items: center;
+  }
+
+  .home-page {
+    padding-bottom: 100px;
+  }
+
+  .cocktail-page,
+  .clothing-page {
+    position: absolute;
+    bottom: -4%;
+    left: 0%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  nav ul {
+    padding-right: 105px;
+  }
+
+  .hero {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: left;
+  }
+  .hero img {
+    height: 100px;
+  }
+
+  .pages {
+    top: 70%;
+  }
+  .pages h3 {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .pages svg {
+    height: 5px;
+  }
+
+  .details {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    text-align: left;
+  }
+  .details h1 {
+    font-size: 20px;
+  }
+  .details h2 {
+    font-size: 10px;
   }
 }
 
