@@ -43,46 +43,48 @@ a {
 
 nav {
   grid-row: 1/2;
-  min-height: 20vh;
+  /* min-height: 20vh; */
   width: 90%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 5rem;
+  /* padding-top: 5rem; */
   max-width: 120rem;
   text-transform: uppercase;
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
+  font-size: 24px;
 }
 .logo {
-  height: 5px;
-  width: 5px;
+  /* height: 5px;
+  width: 5px; */
   transform: translateX(-1000rem);
   animation: slideIn 0.5s forwards;
   align-self: flex-start;
 }
 .logo-size {
   height: 100px;
-  padding: 0;
-  margin: 0;
+  /* padding: 0;
+  margin: 0; */
 }
 
 .page {
-  min-height: 90vh;
+  /* min-height: 90vh; */
   grid-row: 2/3;
   display: grid;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
   position: relative;
+  padding-top: 100px;
 }
 
-.home-page {
+/* .home-page {
   padding-bottom: 200px;
-}
+} */
 .cocktail-page,
 .clothing-page {
   position: absolute;
-  bottom: -3%;
-  left: 0%;
+  bottom: -6.5%;
+  /* left: 0%; */
   width: 100%;
   opacity: 0;
   pointer-events: none;
@@ -224,7 +226,7 @@ nav ul li a:hover::after {
 .pages {
   position: absolute;
   right: 5%;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
   text-transform: uppercase;
 }
@@ -262,14 +264,15 @@ nav ul li a:hover::after {
 
 @media (max-width: 1024px) /* iPad Pro */ {
   nav {
-    padding-top: 10px;
-    align-items: flex-start;
+    /* padding-top: 10px; */
+    /* align-items: flex-start; */
   }
 
   .page {
     grid-template-columns: 5% 1fr 5%;
     grid-template-rows: 1fr 1fr;
     align-items: center;
+    padding-bottom: 100px;
   }
 
   .dropdown {
@@ -284,7 +287,7 @@ nav ul li a:hover::after {
     align-self: center;
   }
   .hero img {
-    height: 325px;
+    height: 250px;
   }
 
   .details {
@@ -294,6 +297,7 @@ nav ul li a:hover::after {
   }
   .details h1 {
     font-size: 38px;
+    padding-top: 50px;
   }
   .details h2 {
     font-size: 24px;
@@ -304,14 +308,20 @@ nav ul li a:hover::after {
 
   .pages {
     right: 5%;
-    top: 40%;
+    top: 50%;
     text-transform: uppercase;
+  }
+  .pages h3 {
+    font-size: 18px;
   }
 }
 
 @media (max-width: 768px) /* iPad */ {
+  .portfolio {
+    grid-template-rows: 1fr 4fr;
+  }
   .logo-size {
-    height: 75px;
+    /* height: 75px; */
   }
   .phone-text {
     display: none;
@@ -321,7 +331,14 @@ nav ul li a:hover::after {
   }
 
   .home-page {
-    padding-bottom: 150px;
+    /* padding-bottom: 150px; */
+  }
+  .cocktail-page,
+  .clothing-page {
+    top: 20%;
+  }
+  .page {
+    padding-bottom: 0;
   }
 
   .hero img {
@@ -339,7 +356,7 @@ nav ul li a:hover::after {
   .pages {
     position: absolute;
     right: 5%;
-    top: 43%;
+    top: 50%;
     transform: translateY(-50%);
     text-transform: uppercase;
   }
@@ -353,15 +370,16 @@ nav ul li a:hover::after {
   .logo-size {
     height: 75px;
   }
-  .phone-text {
+  /* .phone-text {
     display: none;
-  }
+  } */
   .dropdown {
     font-size: 18px;
   }
 
   .home-page {
-    padding-bottom: 150px;
+    padding-bottom: 0;
+    padding-top: 0;
   }
 
   .hero img {
@@ -371,7 +389,7 @@ nav ul li a:hover::after {
     text-align: center;
   }
   .details h1 {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     font-size: 24px;
   }
   .details h2 {
@@ -380,7 +398,7 @@ nav ul li a:hover::after {
   .pages {
     position: absolute;
     right: 5%;
-    top: 43%;
+    top: 50%;
     transform: translateY(-50%);
     text-transform: uppercase;
   }
@@ -390,12 +408,22 @@ nav ul li a:hover::after {
   }
 }
 
-@media (max-width: 532px) {
+@media (max-width: 575px) {
+  nav {
+    justify-content: space-around;
+  }
   .dropdown {
     display: none;
   }
+  .page {
+    padding-top: 0;
+  }
   .hero {
     justify-self: left;
+  }
+
+  .pages {
+    top: 45%;
   }
 }
 
@@ -448,10 +476,32 @@ nav ul li a:hover::after {
   }
 }
 
+@media screen and (min-width: 375px) and (max-width: 814px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  li {
+    display: none;
+  }
+  .pages {
+    display: none;
+  }
+  .details {
+    display: none;
+  }
+}
+
 @media (max-width: 823px) and (max-height: 414px) /* iPhone 6/7/8 Plus,
   iPhone X,
   Google Pixel 2 XL landscape */ {
-  .dropdown {
+  /* .dropdown {
     display: none;
   }
 
@@ -509,7 +559,7 @@ nav ul li a:hover::after {
   }
   .details h2 {
     font-size: 14px;
-  }
+  } */
 }
 
 @media (max-width: 375px) /* iPhone 6/7/8 */ {
@@ -558,7 +608,7 @@ nav ul li a:hover::after {
 }
 
 @media (max-width: 736px) and (max-height: 414px) /* iPhone 6/7/8 landscape */ {
-  .dropdown {
+  /* .dropdown {
     display: none;
   }
 
@@ -616,7 +666,7 @@ nav ul li a:hover::after {
   }
   .details h2 {
     font-size: 14px;
-  }
+  } */
 }
 
 @media (max-width: 320px) /* iPhone 5/SE */ {
@@ -652,7 +702,7 @@ nav ul li a:hover::after {
 }
 
 @media (max-width: 568px) and (max-height: 320px) /* iPhone 5/SE landscape */ {
-  .dropdown {
+  /* .dropdown {
     display: none;
   }
 
@@ -714,25 +764,9 @@ nav ul li a:hover::after {
   }
   .details h2 {
     font-size: 10px;
-  }
+  } */
 }
 
-.nav-open {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 50vh;
-  background: white;
-  z-index: 1;
-  color: black;
-  display: grid;
-  grid-template-columns: 5% 1fr 1fr 5%;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  transform: translateY(-100%);
-}
 .contact {
   grid-column: 2/3;
 }
